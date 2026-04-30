@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta
+    name="description"
+    content="Досье сотрудника HermaLab. Отдельная страница с временными блоками под имя, фото и видео."
+  />
+  <title>HermaLab — Досье сотрудника</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body class="staff-page" data-protected-page="true">
+  <header class="archive-header">
+    <div class="container archive-header-inner">
+      <div>
+        <p class="archive-label">Локальное досье</p>
+        <h1>Карточка сотрудника</h1>
+      </div>
+
+      <div class="archive-header-actions">
+        <a class="btn btn-secondary btn-small" href="staff.html">Назад в архив</a>
+        <button class="btn btn-primary btn-small" type="button" id="logout-button">
+          Закрыть доступ
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main class="archive-main">
+    <section class="archive-section">
+      <div class="container">
+        <div class="archive-warning">
+          <strong>Отдельная страница медиа:</strong> здесь собраны профиль, фото и видео.
+          Блоки с <span class="placeholder-inline">ИМЕНЕМ</span>,
+          <span class="placeholder-inline">ФОТО</span> и
+          <span class="placeholder-inline">ВИДЕО</span> намеренно выделены как временные,
+          чтобы ты позже быстро заменил их на финальные материалы.
+        </div>
+      </div>
+    </section>
+
+    <section class="archive-section">
+      <div class="container">
+        <div class="record-layout">
+          <aside class="archive-card profile-card">
+            <p class="archive-card-label">Карточка сотрудника</p>
+
+            <div class="profile-photo placeholder-box">
+              <span class="placeholder-tag">ВРЕМЕННОЕ ФОТО — ЗАМЕНИТЬ</span>
+              <div class="placeholder-avatar">Фото сотрудника</div>
+            </div>
+
+            <div class="profile-meta placeholder-box">
+              <span class="placeholder-tag">ВРЕМЕННОЕ ИМЯ / ДАННЫЕ — ПРОВЕРИТЬ</span>
+              <h2>Николай Владимирович Вавилов</h2>
+              <p class="profile-role">старший сотрудник лаборатории</p>
+              <ul class="archive-list compact-list">
+                <li>ID карточки: HL-INT-042</li>
+                <li>Статус: локальное досье</li>
+                <li>Уровень доступа: служебный</li>
+                <li>Маршрут: /internal/record</li>
+              </ul>
+            </div>
+          </aside>
+
+          <div class="profile-content">
+            <article class="archive-card profile-info-card">
+              <p class="archive-card-label">Справка</p>
+              <h2>Описание служебной записи</h2>
+              <p>
+                Это отдельное досье сотрудника, куда вынесены вложения и визуальные материалы.
+                Пока страница заполнена тестовой архивной информацией, чтобы было видно, как
+                будет выглядеть итоговый макет после подстановки настоящих данных.
+              </p>
+              <p>
+                Основной служебный архив оставлен как промежуточный слой. Эта страница — конечная
+                карточка, в которую позже можно подставить фото, текстовые материалы и встроенный
+                видеоролик без перестройки всей структуры сайта.
+              </p>
+            </article>
+
+            <article class="archive-card muted-card">
+              <p class="archive-card-label">Архивная сводка</p>
+              <h2>Сигналы записи</h2>
+              <div class="fragments-grid">
+                <div class="fragment-card">SIG-A: вложение не опубликовано</div>
+                <div class="fragment-card">SIG-B: карточка закреплена вручную</div>
+                <div class="fragment-card">SIG-C: медиа ожидают финальную замену</div>
+                <div class="fragment-card">SIG-D: внешняя индексация отключена</div>
+              </div>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="archive-section">
+      <div class="container">
+        <div class="profile-content">
+          <article class="archive-card video-card">
+            <p class="archive-card-label">Видео-сообщение</p>
+            <div class="video-placeholder placeholder-box">
+              <span class="placeholder-tag">ВРЕМЕННОЕ ВИДЕО — ЗАМЕНИТЬ</span>
+              <div class="video-screen">
+                <div class="video-play">▶</div>
+                <p>Здесь будет встроенное видео Игоря</p>
+              </div>
+            </div>
+            <p class="video-note">
+              Сейчас это заглушка. Когда пришлёшь файл или точную схему размещения,
+              этот блок можно заменить на встроенный видеоплеер.
+            </p>
+          </article>
+
+          <article class="archive-card muted-card">
+            <p class="archive-card-label">Приложенные заметки</p>
+            <h2>Шумовой контент для правдоподобия</h2>
+            <div class="log-list">
+              <div class="log-line"><span>REC/01</span><span>Локальное досье создано для медиа-маршрута</span></div>
+              <div class="log-line"><span>REC/02</span><span>Внешняя публикация фото не активирована</span></div>
+              <div class="log-line"><span>REC/03</span><span>Видеовложение ожидает ручной импорт</span></div>
+              <div class="log-line"><span>REC/04</span><span>Текстовая часть останется заменяемой</span></div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta
+    name="description"
+    content="Внутренний архив HermaLab. Служебная страница с архивным шумом, реестром карточек и отдельным переходом к досье сотрудника."
+  />
+  <title>HermaLab — Внутренний архив</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body class="staff-page" data-protected-page="true">
+  <!-- Archive Header -->
+  <header class="archive-header">
+    <div class="container archive-header-inner">
+      <div>
+        <p class="archive-label">Внутренний архив</p>
+        <h1>Служебный раздел HermaLab</h1>
+      </div>
+
+      <div class="archive-header-actions">
+        <a class="btn btn-secondary btn-small" href="index.html">Публичный сайт</a>
+        <button class="btn btn-primary btn-small" type="button" id="logout-button">
+          Закрыть доступ
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main class="archive-main">
+    <!-- Warning -->
+    <section class="archive-section">
+      <div class="container">
+        <div class="archive-warning">
+          <strong>Служебная пометка:</strong> это внутренняя архивная зона. На странице
+          намеренно оставлен рабочий шум: фрагменты журналов, незавершённые карточки,
+          конфликты реестра и технические заметки. Раздел должен выглядеть как живой
+          внутренний слой, а не как пустая служебная заглушка.
+        </div>
+      </div>
+    </section>
+
+    <!-- Noise overview -->
+    <section class="archive-section archive-grid-section">
+      <div class="container archive-grid">
+        <article class="archive-card muted-card">
+          <p class="archive-card-label">Сводка доступа</p>
+          <h2>Общий статус узла</h2>
+          <ul class="archive-list">
+            <li>Внутренние записи: 14</li>
+            <li>Карточки в реестре: 06</li>
+            <li>Повреждённые вложения: 02</li>
+            <li>Архивные конфликты: 03</li>
+          </ul>
+        </article>
+
+        <article class="archive-card muted-card">
+          <p class="archive-card-label">Служебные пометки</p>
+          <h2>Внутренние замечания</h2>
+          <p>
+            Внешняя публикация отключена. Ручная выгрузка медиа перенесена в
+            отдельный архивный маршрут. Временные данные сохранены локально до
+            замены на финальные материалы проекта.
+          </p>
+        </article>
+
+        <article class="archive-card muted-card">
+          <p class="archive-card-label">Технический журнал</p>
+          <h2>Лента операций</h2>
+          <div class="log-list">
+            <div class="log-line"><span>22.04</span><span>Разделён маршрут профиля и медиа</span></div>
+            <div class="log-line"><span>22.04</span><span>Подменены прямые вложения</span></div>
+            <div class="log-line"><span>22.04</span><span>Обновлён реестр выдачи</span></div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- Additional noise -->
+    <section class="archive-section">
+      <div class="container">
+        <div class="noise-layout">
+          <article class="archive-card muted-card">
+            <p class="archive-card-label">Очередь синхронизации</p>
+            <h2>Отложенные задачи</h2>
+            <div class="log-list">
+              <div class="log-line"><span>Q-14</span><span>Переиндексация вложений</span></div>
+              <div class="log-line"><span>Q-19</span><span>Сверка архивных меток</span></div>
+              <div class="log-line"><span>Q-22</span><span>Временная очистка превью</span></div>
+              <div class="log-line"><span>Q-31</span><span>Проверка каталога /staff/media</span></div>
+            </div>
+          </article>
+
+          <article class="archive-card muted-card">
+            <p class="archive-card-label">Фрагменты архива</p>
+            <h2>Служебные обрывки</h2>
+            <div class="fragments-grid">
+              <div class="fragment-card">HL-A/22 — внешний доступ снят</div>
+              <div class="fragment-card">LOG/17 — медиа временно скрыты</div>
+              <div class="fragment-card">CARD/04 — ручная сверка обязательна</div>
+              <div class="fragment-card">NODE/09 — вложение не опубликовано</div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Internal Registry -->
+    <section class="archive-section">
+      <div class="container">
+        <div class="section-head archive-head">
+          <div>
+            <p class="section-label">Внутренний реестр</p>
+            <h2>Служебные карточки</h2>
+          </div>
+        </div>
+
+        <div class="registry-panel archive-surface">
+          <div class="table-wrap">
+            <table class="results-table internal-table">
+              <thead>
+                <tr>
+                  <th>Карточка</th>
+                  <th>Статус</th>
+                  <th>Примечание</th>
+                  <th>Действие</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Лапшин Сергей Романович</td>
+                  <td><span class="status status-muted">Закрыто</span></td>
+                  <td>Материал удалён из внешнего реестра</td>
+                  <td><button class="table-action disabled" type="button">Нет доступа</button></td>
+                </tr>
+                <tr>
+                  <td>Чернова Алёна Викторовна</td>
+                  <td><span class="status status-error">Ошибка</span></td>
+                  <td>Связанный файл не найден</td>
+                  <td><button class="table-action disabled" type="button">Повреждено</button></td>
+                </tr>
+                <tr>
+                  <td>Фролов Михаил Денисович</td>
+                  <td><span class="status status-warn">Ограничено</span></td>
+                  <td>Требуется ручная сверка архива</td>
+                  <td><button class="table-action disabled" type="button">Ограничено</button></td>
+                </tr>
+                <tr class="active-row">
+                  <td>Николай Владимирович Вавилов</td>
+                  <td><span class="status status-active">Активно</span></td>
+                  <td>Профиль перенесён в отдельное досье сотрудника</td>
+                  <td><a class="table-action live" href="record.html">Открыть досье</a></td>
+                </tr>
+                <tr>
+                  <td>Климова Елена Сергеевна</td>
+                  <td><span class="status status-muted">Скрыто</span></td>
+                  <td>Черновой набор внутренних данных</td>
+                  <td><button class="table-action disabled" type="button">Скрыто</button></td>
+                </tr>
+                <tr>
+                  <td>Данилов Тимофей Павлович</td>
+                  <td><span class="status status-error">Отказ</span></td>
+                  <td>Вложение недоступно</td>
+                  <td><button class="table-action disabled" type="button">Отклонено</button></td>
+                </tr>
+                <tr>
+                  <td>Макеева Инна Борисовна</td>
+                  <td><span class="status status-warn">Ожидание</span></td>
+                  <td>Архивная карта помечена для проверки</td>
+                  <td><button class="table-action disabled" type="button">В работе</button></td>
+                </tr>
+                <tr>
+                  <td>Гаврилов Павел Аркадьевич</td>
+                  <td><span class="status status-error">Сбой</span></td>
+                  <td>Данные чтения прерваны на этапе выгрузки</td>
+                  <td><button class="table-action disabled" type="button">Прервано</button></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Additional archive noise -->
+    <section class="archive-section">
+      <div class="container">
+        <div class="profile-content">
+          <article class="archive-card profile-info-card">
+            <p class="archive-card-label">Диагностический контур</p>
+            <h2>Сводка нестыковок</h2>
+            <p>
+              За текущую сессию архив пометил несколько несовпадений по индексам,
+              временным меткам и вложениям. Часть карточек оставлена в сером статусе
+              намеренно — это добавляет ощущение живого служебного контура.
+            </p>
+            <div class="fragments-grid">
+              <div class="fragment-card">IDX/03 — конфликт временной метки</div>
+              <div class="fragment-card">REF/11 — ссылка на вложение устарела</div>
+              <div class="fragment-card">ARC/27 — повтор архива зафиксирован</div>
+              <div class="fragment-card">SIG/08 — ручная подпись не совпала</div>
+            </div>
+          </article>
+
+          <article class="archive-card muted-card">
+            <p class="archive-card-label">Служебная лента</p>
+            <h2>Недавние внутренние события</h2>
+            <div class="log-list">
+              <div class="log-line"><span>21:31</span><span>В реестр добавлены ложные конфликтные записи</span></div>
+              <div class="log-line"><span>21:08</span><span>Сигнатура вложения обновлена вручную</span></div>
+              <div class="log-line"><span>20:54</span><span>Внешний просмотр архивных вложений отключён</span></div>
+              <div class="log-line"><span>20:33</span><span>Расширен набор архивного шума для интерфейса</span></div>
+              <div class="log-line"><span>20:12</span><span>Перестроен маршрут внутренних записей</span></div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="archive-section">
+      <div class="container">
+        <div class="noise-layout">
+          <article class="archive-card muted-card">
+            <p class="archive-card-label">Внутренние флаги</p>
+            <h2>Активные отметки системы</h2>
+            <ul class="archive-list">
+              <li>Флаг A-12: скрыть внешний превью-слой</li>
+              <li>Флаг B-07: оставлять пустые действия у ложных карт</li>
+              <li>Флаг C-03: не публиковать черновые вложения</li>
+              <li>Флаг D-19: поддерживать конфликтные статусы в реестре</li>
+            </ul>
+          </article>
+
+          <article class="archive-card muted-card">
+            <p class="archive-card-label">Очередь удаления</p>
+            <h2>Отложенные архивные операции</h2>
+            <div class="log-list">
+              <div class="log-line"><span>DEL-02</span><span>Черновой экспорт 17.04 будет очищен после замены</span></div>
+              <div class="log-line"><span>DEL-05</span><span>Промежуточные превью не публиковать во внешнем слое</span></div>
+              <div class="log-line"><span>DEL-09</span><span>Пустые карточки оставить до финальной сборки</span></div>
+              <div class="log-line"><span>DEL-14</span><span>Ошибки чтения не скрывать для правдоподобия интерфейса</span></div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>

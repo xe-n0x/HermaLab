@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta
+    name="description"
+    content="HermaLab — лаборатория точных анализов крови. Публичный интерфейс и скрытый служебный доступ для внутреннего проекта."
+  />
+  <title>HermaLab — Точные анализы крови</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body class="public-page">
+  <!-- Header -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="#home" class="logo">HermaLab</a>
+
+      <button class="menu-toggle" type="button" aria-label="Открыть меню" aria-expanded="false">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+
+      <nav class="main-nav" aria-label="Основная навигация">
+        <ul class="nav-list">
+          <li><a href="#home">Главная</a></li>
+          <li><a href="#analyses">Анализы</a></li>
+          <li><a href="#results">Результаты</a></li>
+          <li><a href="#about">О нас</a></li>
+          <li><a href="#contacts">Контакты</a></li>
+        </ul>
+      </nav>
+
+      <div class="header-actions">
+        <button class="staff-trigger" type="button" data-open-access>
+          Служебный доступ
+        </button>
+        <a class="header-phone" href="tel:+78001234567">+7 (800) 123-45-67</a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- Hero -->
+    <section class="hero section" id="home">
+      <div class="container hero-inner">
+        <div class="hero-content">
+          <p class="hero-label">Современная медицинская лаборатория</p>
+          <h1>Точные анализы крови</h1>
+          <p class="hero-text">
+            Проводим лабораторные исследования с вниманием к деталям, понятной
+            выдачей результатов и профессиональным сопровождением.
+          </p>
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="#contacts">Записаться</a>
+            <a class="btn btn-secondary" href="#analyses">Выбрать анализ</a>
+          </div>
+        </div>
+
+        <div class="hero-card">
+          <div class="hero-card-icon">🧪</div>
+          <h2>Результаты, которым доверяют</h2>
+          <p>
+            Быстрая обработка образцов, строгий контроль качества и удобная
+            запись без лишней бюрократии.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Popular Analyses -->
+    <section class="section analyses" id="analyses">
+      <div class="container">
+        <div class="section-head">
+          <div>
+            <p class="section-label">Популярные исследования</p>
+            <h2>Популярные анализы</h2>
+          </div>
+          <a class="btn btn-secondary" href="#results">Архив выдачи</a>
+        </div>
+
+        <div class="analysis-grid">
+          <article class="analysis-card">
+            <div class="analysis-icon" aria-hidden="true">🩸</div>
+            <h3>Общий анализ крови (ОАК)</h3>
+            <p>
+              Базовое исследование для общей оценки состояния организма,
+              воспалительных процессов и анемии.
+            </p>
+            <div class="analysis-footer">
+              <span class="price">от 690 ₽</span>
+              <a class="card-link" href="#results">Подробнее</a>
+            </div>
+          </article>
+
+          <article class="analysis-card">
+            <div class="analysis-icon" aria-hidden="true">🔬</div>
+            <h3>Биохимия крови</h3>
+            <p>
+              Комплекс из 10–15 показателей для оценки работы печени, почек,
+              обмена веществ и внутренних органов.
+            </p>
+            <div class="analysis-footer">
+              <span class="price">от 1 490 ₽</span>
+              <a class="card-link" href="#results">Подробнее</a>
+            </div>
+          </article>
+
+          <article class="analysis-card">
+            <div class="analysis-icon" aria-hidden="true">🍬</div>
+            <h3>Глюкоза натощак</h3>
+            <p>
+              Скрининговый анализ для раннего выявления нарушений углеводного
+              обмена и диагностики диабета.
+            </p>
+            <div class="analysis-footer">
+              <span class="price">от 450 ₽</span>
+              <a class="card-link" href="#results">Подробнее</a>
+            </div>
+          </article>
+
+          <article class="analysis-card">
+            <div class="analysis-icon" aria-hidden="true">🛡️</div>
+            <h3>Коагулограмма</h3>
+            <p>
+              Исследование свёртывающей системы крови перед операциями,
+              при беременности и по назначению врача.
+            </p>
+            <div class="analysis-footer">
+              <span class="price">от 1 150 ₽</span>
+              <a class="card-link" href="#results">Подробнее</a>
+            </div>
+          </article>
+
+          <article class="analysis-card">
+            <div class="analysis-icon" aria-hidden="true">🦋</div>
+            <h3>ТТГ, Т3, Т4</h3>
+            <p>
+              Профиль гормонов щитовидной железы для диагностики гипо- и
+              гипертиреоза и оценки гормонального баланса.
+            </p>
+            <div class="analysis-footer">
+              <span class="price">от 1 890 ₽</span>
+              <a class="card-link" href="#results">Подробнее</a>
+            </div>
+          </article>
+
+          <article class="analysis-card">
+            <div class="analysis-icon" aria-hidden="true">❤️</div>
+            <h3>Липидный профиль</h3>
+            <p>
+              Анализ холестерина и липидных фракций для оценки сердечно-сосудистых
+              рисков и контроля терапии.
+            </p>
+            <div class="analysis-footer">
+              <span class="price">от 1 290 ₽</span>
+              <a class="card-link" href="#results">Подробнее</a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Result Registry -->
+    <section class="section registry" id="results">
+      <div class="container">
+        <div class="section-head">
+          <div>
+            <p class="section-label">Архив выдачи</p>
+            <h2>Результаты анализов</h2>
+          </div>
+          <button class="btn btn-secondary" type="button" data-open-access>
+            Открыть служебный доступ
+          </button>
+        </div>
+
+        <div class="registry-panel">
+          <div class="registry-note">
+            <strong>Справка:</strong> часть записей доступна только через
+            внутренний архив. Для получения расширенного доступа используйте
+            служебный код.
+          </div>
+
+          <div class="table-wrap">
+            <table class="results-table">
+              <thead>
+                <tr>
+                  <th>ФИО</th>
+                  <th>Исследование</th>
+                  <th>Статус</th>
+                  <th>Доступ</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Карпов Артём Сергеевич</td>
+                  <td>Биохимия крови</td>
+                  <td><span class="status status-muted">Архивировано</span></td>
+                  <td><button class="table-action disabled" type="button">Данные недоступны</button></td>
+                </tr>
+                <tr>
+                  <td>Иванова Марина Олеговна</td>
+                  <td>ОАК</td>
+                  <td><span class="status status-warn">Ошибка реестра</span></td>
+                  <td><button class="table-action disabled" type="button">Повторите позже</button></td>
+                </tr>
+                <tr>
+                  <td>Соколов Дмитрий Павлович</td>
+                  <td>Коагулограмма</td>
+                  <td><span class="status status-muted">Ограничено</span></td>
+                  <td><button class="table-action disabled" type="button">Доступ ограничен</button></td>
+                </tr>
+                <tr>
+                  <td>Егорова Наталья Ильинична</td>
+                  <td>ТТГ, Т3, Т4</td>
+                  <td><span class="status status-muted">Внутренний архив</span></td>
+                  <td><button class="table-action disabled" type="button">Требуется код</button></td>
+                </tr>
+                <tr>
+                  <td>Мельников Пётр Андреевич</td>
+                  <td>Липидный профиль</td>
+                  <td><span class="status status-error">Запись повреждена</span></td>
+                  <td><button class="table-action disabled" type="button">Ошибка открытия</button></td>
+                </tr>
+                <tr>
+                  <td>Орлова Вера Денисовна</td>
+                  <td>Глюкоза натощак</td>
+                  <td><span class="status status-muted">Недоступно извне</span></td>
+                  <td><button class="table-action disabled" type="button">Скрыто</button></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- About -->
+    <section class="section about" id="about">
+      <div class="container about-inner">
+        <div class="about-text">
+          <p class="section-label">О лаборатории</p>
+          <h2>HermaLab — современный подход к лабораторной диагностике</h2>
+
+          <p>
+            HermaLab — вымышленная медицинская лаборатория, ориентированная на
+            точность результатов, прозрачность процессов и комфорт пациентов.
+            Мы создаём понятный и профессиональный сервис, где каждая деталь
+            работает на качество исследования.
+          </p>
+
+          <p>
+            В основе нашей работы — стандартизированные лабораторные процедуры,
+            аккуратная обработка биоматериала и внимание к срокам. Мы стремимся
+            сделать диагностику спокойной, быстрой и предсказуемой для каждого пациента.
+          </p>
+
+          <p>
+            Нам важно, чтобы результаты были не просто готовы вовремя, но и
+            представлены понятно. Поэтому мы делаем акцент на удобной записи,
+            корректной коммуникации и высоком уровне сервиса на каждом этапе.
+          </p>
+        </div>
+
+        <div class="advantages">
+          <div class="advantage-item">
+            <div class="advantage-icon" aria-hidden="true">✅</div>
+            <div>
+              <h3>Контроль качества</h3>
+              <p>Стандартизированные процессы и внимательная проверка результатов.</p>
+            </div>
+          </div>
+
+          <div class="advantage-item">
+            <div class="advantage-icon" aria-hidden="true">⏱️</div>
+            <div>
+              <h3>Быстрые сроки</h3>
+              <p>Оперативная обработка анализов без потери точности и надёжности.</p>
+            </div>
+          </div>
+
+          <div class="advantage-item">
+            <div class="advantage-icon" aria-hidden="true">👩‍⚕️</div>
+            <div>
+              <h3>Профессиональный сервис</h3>
+              <p>Вежливая поддержка, понятная запись и удобная коммуникация.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="site-footer" id="contacts">
+    <div class="container footer-grid">
+      <div>
+        <h3>HermaLab</h3>
+        <p>Точные анализы крови для профилактики, контроля и диагностики.</p>
+      </div>
+
+      <div>
+        <h4>Контакты</h4>
+        <ul class="footer-list">
+          <li><a href="tel:+78001234567">+7 (800) 123-45-67</a></li>
+          <li><a href="mailto:info@hermalab.local">info@hermalab.local</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h4>Адрес</h4>
+        <p>г. Москва, ул. Академическая, 12</p>
+      </div>
+
+      <div>
+        <h4>Часы работы</h4>
+        <ul class="footer-list">
+          <li>Пн–Пт: 07:30–19:00</li>
+          <li>Сб: 08:00–15:00</li>
+          <li>Вс: выходной</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="container footer-bottom">
+      <p>&copy; <span id="current-year"></span> HermaLab. Все права защищены.</p>
+    </div>
+  </footer>
+
+  <!-- Access Modal -->
+  <div class="access-modal" id="access-modal" aria-hidden="true">
+    <div class="access-backdrop" data-close-access></div>
+
+    <section class="access-dialog" role="dialog" aria-modal="true" aria-labelledby="access-title">
+      <button class="access-close" type="button" aria-label="Закрыть окно" data-close-access>
+        ×
+      </button>
+
+      <p class="dialog-label">Служебный доступ</p>
+      <h2 id="access-title">Внутренний архив HermaLab</h2>
+      <p class="dialog-text">
+        Для просмотра служебных данных и внутренней страницы сотрудника введите
+        код-пароль, найденный ранее.
+      </p>
+
+      <form class="access-form" id="access-form">
+        <label class="access-label" for="staff-code">Код доступа</label>
+        <input
+          class="access-input"
+          id="staff-code"
+          name="staffCode"
+          type="password"
+          autocomplete="off"
+          placeholder="Введите код"
+          required
+        />
+        <p class="access-hint">Регистр учитывается.</p>
+        <p class="access-message" id="access-message" aria-live="polite"></p>
+        <button class="btn btn-primary access-submit" type="submit">
+          Подтвердить доступ
+        </button>
+      </form>
+    </section>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
