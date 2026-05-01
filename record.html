@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta
     name="description"
-    content="Досье сотрудника HermaLab. Отдельная страница с временными блоками под имя, фото и видео."
+    content="Досье сотрудника HermaLab. Отдельная страница с заполненной служебной информацией и временными блоками под фото и видео."
   />
   <title>HermaLab — Досье сотрудника</title>
   <link rel="stylesheet" href="styles.css" />
@@ -31,11 +31,10 @@
     <section class="archive-section">
       <div class="container">
         <div class="archive-warning">
-          <strong>Отдельная страница медиа:</strong> здесь собраны профиль, фото и видео.
-          Блоки с <span class="placeholder-inline">ИМЕНЕМ</span>,
-          <span class="placeholder-inline">ФОТО</span> и
-          <span class="placeholder-inline">ВИДЕО</span> намеренно выделены как временные,
-          чтобы ты позже быстро заменил их на финальные материалы.
+          <strong>Отдельная страница досье:</strong> здесь собраны служебные данные
+          сотрудника и локальные вложения. Блоки с <span class="placeholder-inline">ФОТО</span>
+          и <span class="placeholder-inline">ВИДЕО</span> оставлены временными и готовы
+          к замене на финальные материалы без переделки страницы.
         </div>
       </div>
     </section>
@@ -51,43 +50,54 @@
               <div class="placeholder-avatar">Фото сотрудника</div>
             </div>
 
-            <div class="profile-meta placeholder-box">
-              <span class="placeholder-tag">ВРЕМЕННОЕ ИМЯ / ДАННЫЕ — ПРОВЕРИТЬ</span>
+            <div class="profile-meta">
               <h2>Николай Владимирович Вавилов</h2>
               <p class="profile-role">старший сотрудник лаборатории</p>
               <ul class="archive-list compact-list">
                 <li>ID карточки: HL-INT-042</li>
-                <li>Статус: локальное досье</li>
+                <li>Статус записи: локальное досье</li>
                 <li>Уровень доступа: служебный</li>
-                <li>Маршрут: /internal/record</li>
+                <li>Подразделение: архив и лабораторное сопровождение</li>
+                <li>Последняя сверка: 22.04 / 09:36</li>
               </ul>
             </div>
           </aside>
 
           <div class="profile-content">
             <article class="archive-card profile-info-card">
-              <p class="archive-card-label">Справка</p>
-              <h2>Описание служебной записи</h2>
+              <p class="archive-card-label">Служебная информация</p>
+              <h2>Описание записи</h2>
               <p>
-                Это отдельное досье сотрудника, куда вынесены вложения и визуальные материалы.
-                Пока страница заполнена тестовой архивной информацией, чтобы было видно, как
-                будет выглядеть итоговый макет после подстановки настоящих данных.
+                Карточка оформлена как локальное внутреннее досье сотрудника. Раздел
+                используется для хранения краткой справки, рабочих пометок и вложений,
+                которые не должны отображаться в публичной части сайта.
               </p>
               <p>
-                Основной служебный архив оставлен как промежуточный слой. Эта страница — конечная
-                карточка, в которую позже можно подставить фото, текстовые материалы и встроенный
-                видеоролик без перестройки всей структуры сайта.
+                В текущем состоянии запись привязана к архивному маршруту и может
+                использоваться как конечная точка перехода из служебного реестра.
+                Фото и видео будут встроены отдельно после замены временных блоков.
               </p>
+            </article>
+
+            <article class="archive-card muted-card">
+              <p class="archive-card-label">Обязанности и доступ</p>
+              <h2>Краткая служебная сводка</h2>
+              <ul class="archive-list">
+                <li>Координация внутренних записей и архивных карточек</li>
+                <li>Контроль согласованности публикаций и локальных вложений</li>
+                <li>Проверка служебных комментариев перед ручной выгрузкой</li>
+                <li>Подтверждение перехода к локальным медиа-материалам</li>
+              </ul>
             </article>
 
             <article class="archive-card muted-card">
               <p class="archive-card-label">Архивная сводка</p>
               <h2>Сигналы записи</h2>
               <div class="fragments-grid">
-                <div class="fragment-card">SIG-A: вложение не опубликовано</div>
-                <div class="fragment-card">SIG-B: карточка закреплена вручную</div>
-                <div class="fragment-card">SIG-C: медиа ожидают финальную замену</div>
-                <div class="fragment-card">SIG-D: внешняя индексация отключена</div>
+                <div class="fragment-card">SIG-A: запись закреплена в реестре вручную</div>
+                <div class="fragment-card">SIG-B: публикация вложений выполняется локально</div>
+                <div class="fragment-card">SIG-C: досье исключено из внешнего индекса</div>
+                <div class="fragment-card">SIG-D: карточка используется как конечная точка маршрута</div>
               </div>
             </article>
           </div>
@@ -115,12 +125,12 @@
 
           <article class="archive-card muted-card">
             <p class="archive-card-label">Приложенные заметки</p>
-            <h2>Шумовой контент для правдоподобия</h2>
+            <h2>Журнал сопровождения</h2>
             <div class="log-list">
-              <div class="log-line"><span>REC/01</span><span>Локальное досье создано для медиа-маршрута</span></div>
-              <div class="log-line"><span>REC/02</span><span>Внешняя публикация фото не активирована</span></div>
-              <div class="log-line"><span>REC/03</span><span>Видеовложение ожидает ручной импорт</span></div>
-              <div class="log-line"><span>REC/04</span><span>Текстовая часть останется заменяемой</span></div>
+              <div class="log-line"><span>REC/01</span><span>Локальное досье создано и связано с внутренним реестром</span></div>
+              <div class="log-line"><span>REC/02</span><span>Фотоматериал ожидает финальную замену в карточке</span></div>
+              <div class="log-line"><span>REC/03</span><span>Видео-вложение подготовлено под встраиваемый формат</span></div>
+              <div class="log-line"><span>REC/04</span><span>Текстовая служебная часть актуализирована для демонстрации</span></div>
             </div>
           </article>
         </div>
