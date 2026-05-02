@@ -1,4 +1,4 @@
-const ACCESS_CODE = 'MELATONIN';
+const ACCESS_CODE = 'ISTINA';
 const ACCESS_KEY = 'hermalab_staff_access';
 
 const header = document.querySelector('.site-header');
