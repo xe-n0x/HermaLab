@@ -768,10 +768,6 @@ p {
   gap: 20px;
 }
 
-.archive-grid-wide {
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-}
-
 .archive-card,
 .archive-surface {
   background-color: rgba(13, 24, 39, 0.9);
@@ -939,36 +935,37 @@ p {
 }
 
 
-
-.noise-layout {
-  display: grid;
-  grid-template-columns: 1.05fr 0.95fr;
-  gap: 24px;
+.media-box {
+  border: 1px solid rgba(56, 189, 248, 0.18);
+  border-radius: 14px;
+  padding: 14px;
+  background-color: rgba(8, 17, 29, 0.6);
 }
 
-.fragments-grid {
-  display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 12px;
+.media-label {
+  margin-bottom: 12px;
+  color: var(--archive-accent) !important;
+  font-size: 0.82rem;
+  font-weight: 800;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
 }
 
-.fragment-card {
-  padding: 12px 14px;
+.profile-image {
+  width: 100%;
+  min-height: 260px;
+  object-fit: cover;
   border-radius: 12px;
-  background-color: rgba(148, 163, 184, 0.06);
-  border: 1px solid rgba(148, 163, 184, 0.1);
-  color: var(--archive-muted);
+  border: 1px solid rgba(148, 163, 184, 0.18);
+  background-color: rgba(15, 23, 42, 0.7);
 }
 
-.record-layout {
-  display: grid;
-  grid-template-columns: minmax(280px, 340px) minmax(0, 1fr);
-  gap: 24px;
-  align-items: start;
-}
-
-.record-actions {
-  margin-top: 20px;
+.record-video {
+  width: 100%;
+  display: block;
+  border-radius: 12px;
+  border: 1px solid rgba(148, 163, 184, 0.18);
+  background-color: #020617;
 }
 
 /* =========================
@@ -979,9 +976,7 @@ p {
   .about-inner,
   .footer-grid,
   .archive-grid,
-  .profile-layout,
-  .record-layout,
-  .noise-layout {
+  .profile-layout {
     grid-template-columns: 1fr;
   }
 
@@ -1055,10 +1050,6 @@ p {
   }
 
   .analysis-grid {
-    grid-template-columns: 1fr;
-  }
-
-  .fragments-grid {
     grid-template-columns: 1fr;
   }
 

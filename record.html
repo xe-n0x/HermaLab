@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta
     name="description"
-    content="Досье сотрудника HermaLab. Отдельная страница с заполненной служебной информацией и временными блоками под фото и видео."
+    content="Досье сотрудника HermaLab. Карточка, фото и видеоматериалы внутреннего архива."
   />
   <title>HermaLab — Досье сотрудника</title>
   <link rel="stylesheet" href="styles.css" />
@@ -31,10 +31,8 @@
     <section class="archive-section">
       <div class="container">
         <div class="archive-warning">
-          <strong>Отдельная страница досье:</strong> здесь собраны служебные данные
-          сотрудника и локальные вложения. Блоки с <span class="placeholder-inline">ФОТО</span>
-          и <span class="placeholder-inline">ВИДЕО</span> оставлены временными и готовы
-          к замене на финальные материалы без переделки страницы.
+          <strong>Карточка сотрудника:</strong> страница содержит профиль, приложенные материалы
+          и внутренние сведения по записи HL-INT-042.
         </div>
       </div>
     </section>
@@ -43,61 +41,51 @@
       <div class="container">
         <div class="record-layout">
           <aside class="archive-card profile-card">
-            <p class="archive-card-label">Карточка сотрудника</p>
+            <p class="archive-card-label">Личное дело</p>
 
-            <div class="profile-photo placeholder-box">
-              <span class="placeholder-tag">ВРЕМЕННОЕ ФОТО — ЗАМЕНИТЬ</span>
-              <div class="placeholder-avatar">Фото сотрудника</div>
+            <div class="profile-photo media-box">
+              <p class="media-label">Фотография сотрудника</p>
+              <img
+                class="profile-image"
+                src="staff-photo.png"
+                alt="Фотография сотрудника лаборатории"
+              />
             </div>
 
-            <div class="profile-meta">
+            <div class="profile-meta media-box">
               <h2>Николай Владимирович Вавилов</h2>
               <p class="profile-role">старший сотрудник лаборатории</p>
               <ul class="archive-list compact-list">
                 <li>ID карточки: HL-INT-042</li>
-                <li>Статус записи: локальное досье</li>
+                <li>Статус: локальное досье</li>
                 <li>Уровень доступа: служебный</li>
-                <li>Подразделение: архив и лабораторное сопровождение</li>
-                <li>Последняя сверка: 22.04 / 09:36</li>
+                <li>Маршрут: /internal/record</li>
               </ul>
             </div>
           </aside>
 
           <div class="profile-content">
             <article class="archive-card profile-info-card">
-              <p class="archive-card-label">Служебная информация</p>
-              <h2>Описание записи</h2>
+              <p class="archive-card-label">Справка по записи</p>
+              <h2>Описание сотрудника</h2>
               <p>
-                Карточка оформлена как локальное внутреннее досье сотрудника. Раздел
-                используется для хранения краткой справки, рабочих пометок и вложений,
-                которые не должны отображаться в публичной части сайта.
+                Карточка закреплена за внутренним архивом лаборатории и используется для хранения
+                приложенных материалов, локальных медиафайлов и сопровождающих записей по сотруднику.
               </p>
               <p>
-                В текущем состоянии запись привязана к архивному маршруту и может
-                использоваться как конечная точка перехода из служебного реестра.
-                Фото и видео будут встроены отдельно после замены временных блоков.
+                Доступ к этой странице осуществляется из служебного реестра. Фотография и видеоматериал
+                доступны только внутри маршрута записи и не выводятся во внешний контур публикации.
               </p>
             </article>
 
             <article class="archive-card muted-card">
-              <p class="archive-card-label">Обязанности и доступ</p>
-              <h2>Краткая служебная сводка</h2>
-              <ul class="archive-list">
-                <li>Координация внутренних записей и архивных карточек</li>
-                <li>Контроль согласованности публикаций и локальных вложений</li>
-                <li>Проверка служебных комментариев перед ручной выгрузкой</li>
-                <li>Подтверждение перехода к локальным медиа-материалам</li>
-              </ul>
-            </article>
-
-            <article class="archive-card muted-card">
-              <p class="archive-card-label">Архивная сводка</p>
-              <h2>Сигналы записи</h2>
+              <p class="archive-card-label">Параметры записи</p>
+              <h2>Служебные атрибуты</h2>
               <div class="fragments-grid">
-                <div class="fragment-card">SIG-A: запись закреплена в реестре вручную</div>
-                <div class="fragment-card">SIG-B: публикация вложений выполняется локально</div>
-                <div class="fragment-card">SIG-C: досье исключено из внешнего индекса</div>
-                <div class="fragment-card">SIG-D: карточка используется как конечная точка маршрута</div>
+                <div class="fragment-card">Канал хранения: локальный архив</div>
+                <div class="fragment-card">Маршрут открытия: через реестр</div>
+                <div class="fragment-card">Индекс карточки: HL-INT-042</div>
+                <div class="fragment-card">Вывод во внешний контур: отключён</div>
               </div>
             </article>
           </div>
@@ -110,27 +98,27 @@
         <div class="profile-content">
           <article class="archive-card video-card">
             <p class="archive-card-label">Видео-сообщение</p>
-            <div class="video-placeholder placeholder-box">
-              <span class="placeholder-tag">ВРЕМЕННОЕ ВИДЕО — ЗАМЕНИТЬ</span>
-              <div class="video-screen">
-                <div class="video-play">▶</div>
-                <p>Здесь будет встроенное видео Игоря</p>
-              </div>
+            <div class="video-placeholder media-box">
+              <p class="media-label">Локальное вложение</p>
+              <video class="record-video" controls preload="metadata">
+                <source src="staff-message.mp4" type="video/mp4" />
+                Ваш браузер не поддерживает встроенное воспроизведение видео.
+              </video>
             </div>
             <p class="video-note">
-              Сейчас это заглушка. Когда пришлёшь файл или точную схему размещения,
-              этот блок можно заменить на встроенный видеоплеер.
+              Видеофайл подключён к карточке сотрудника и доступен для просмотра
+              через внутренний архив лаборатории.
             </p>
           </article>
 
           <article class="archive-card muted-card">
-            <p class="archive-card-label">Приложенные заметки</p>
-            <h2>Журнал сопровождения</h2>
+            <p class="archive-card-label">Сопроводительные заметки</p>
+            <h2>Журнал записи</h2>
             <div class="log-list">
-              <div class="log-line"><span>REC/01</span><span>Локальное досье создано и связано с внутренним реестром</span></div>
-              <div class="log-line"><span>REC/02</span><span>Фотоматериал ожидает финальную замену в карточке</span></div>
-              <div class="log-line"><span>REC/03</span><span>Видео-вложение подготовлено под встраиваемый формат</span></div>
-              <div class="log-line"><span>REC/04</span><span>Текстовая служебная часть актуализирована для демонстрации</span></div>
+              <div class="log-line"><span>REC/01</span><span>Карточка сотрудника привязана к локальному хранилищу</span></div>
+              <div class="log-line"><span>REC/02</span><span>Фотоматериал загружен в профиль записи</span></div>
+              <div class="log-line"><span>REC/03</span><span>Видеовложение подключено без внешней публикации</span></div>
+              <div class="log-line"><span>REC/04</span><span>Маршрут доступа подтверждён внутренним реестром</span></div>
             </div>
           </article>
         </div>
