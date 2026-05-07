@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta
     name="description"
-    content="Внутренний архив HermaLab. Служебный реестр материалов, статусов и записей лаборатории."
+    content="Внутренний архив HermaLab. Служебная страница с реестром сотрудников, оперативными сводками и внутренними отметками лаборатории."
   />
   <title>HermaLab — Внутренний архив</title>
   <link rel="stylesheet" href="styles.css" />
@@ -31,8 +31,10 @@
     <section class="archive-section">
       <div class="container">
         <div class="archive-warning">
-          <strong>Служебный доступ:</strong> раздел предназначен для просмотра внутренних записей,
-          статусов материалов, служебных отметок и архивных карточек сотрудников.
+          <strong>Служебная пометка:</strong> в этом разделе размещены внутренние
+          реестры сотрудников, сводки по приёму биоматериала, контрольные журналы
+          и архивные карточки. Медиафайлы и персональные материалы вынесены на
+          отдельные страницы досье и не отображаются в общем реестре.
         </div>
       </div>
     </section>
@@ -41,33 +43,38 @@
       <div class="container archive-grid">
         <article class="archive-card muted-card">
           <p class="archive-card-label">Оперативная сводка</p>
-          <h2>Текущий статус смены</h2>
+          <h2>Состояние утренней смены</h2>
           <ul class="archive-list">
-            <li>Принято образцов за смену: 47</li>
-            <li>Завершено исследований: 39</li>
-            <li>Записей на ручной проверке: 4</li>
-            <li>Отложенных публикаций: 2</li>
+            <li>Принято пробирок с 07:30: 126</li>
+            <li>На первичной верификации: 11</li>
+            <li>Срочные направления по ОАК и биохимии: 7</li>
+            <li>Материалы, удержанные до повторного забора: 2</li>
           </ul>
         </article>
 
         <article class="archive-card muted-card">
-          <p class="archive-card-label">Контроль качества</p>
-          <h2>Проверка каналов передачи</h2>
+          <p class="archive-card-label">Служебные примечания</p>
+          <h2>Комментарий старшего смены</h2>
           <p>
-            Автоматическая выгрузка в реестр результатов выполнена частично. Записи,
-            отмеченные как ограниченные, остаются доступными только через внутренний архив
-            до завершения сверки статусов и приложенных материалов.
+            Приём биоматериала по направлениям из процедурного кабинета идёт в
+            штатном режиме. Ускоренная валидация включена только для срочных
+            направлений и повторных исследований по запросу врача.
+          </p>
+          <p>
+            Публикация служебных карточек в общий реестр ограничена. Персональные
+            досье сотрудников и локальные вложения открываются адресно после
+            внутренней проверки доступа.
           </p>
         </article>
 
         <article class="archive-card muted-card">
-          <p class="archive-card-label">Журнал смены</p>
+          <p class="archive-card-label">Журнал обновлений</p>
           <h2>Последние действия</h2>
           <div class="log-list">
-            <div class="log-line"><span>08:14</span><span>Открыта смена приёмного окна №2</span></div>
-            <div class="log-line"><span>09:02</span><span>Подтверждена ручная сверка 3 карточек архива</span></div>
-            <div class="log-line"><span>09:41</span><span>Ограничен внешний доступ к одной записи сотрудника</span></div>
-            <div class="log-line"><span>10:06</span><span>Обновлён внутренний маршрут приложений</span></div>
+            <div class="log-line"><span>07:42</span><span>Открыта смена приёма, журнал температур подписан</span></div>
+            <div class="log-line"><span>08:19</span><span>Запущена серия по биохимическому анализатору AU-480</span></div>
+            <div class="log-line"><span>09:06</span><span>Подтверждён контрольный материал по глюкозе и АЛТ</span></div>
+            <div class="log-line"><span>10:11</span><span>Доступ к отдельному досье сотрудника подтверждён</span></div>
           </div>
         </article>
       </div>
@@ -97,38 +104,50 @@
                 <tr>
                   <td>Лапшин Сергей Романович</td>
                   <td><span class="status status-muted">Архив</span></td>
-                  <td>Материалы переведены в закрытое хранение</td>
-                  <td><button class="table-action disabled" type="button">Закрыто</button></td>
+                  <td>Личное дело переведено в бумажный архив, цифровая копия скрыта</td>
+                  <td><button class="table-action disabled" type="button">Архив</button></td>
                 </tr>
                 <tr>
                   <td>Чернова Алёна Викторовна</td>
                   <td><span class="status status-error">Ошибка</span></td>
-                  <td>Связанный файл не найден в канале публикации</td>
-                  <td><button class="table-action disabled" type="button">Недоступно</button></td>
+                  <td>Не найдена локальная копия приложения к карточке</td>
+                  <td><button class="table-action disabled" type="button">Нужно восстановление</button></td>
                 </tr>
                 <tr>
                   <td>Фролов Михаил Денисович</td>
                   <td><span class="status status-warn">Проверка</span></td>
-                  <td>Требуется подтверждение маршрута приложений</td>
-                  <td><button class="table-action disabled" type="button">На сверке</button></td>
+                  <td>Карточка удержана до сверки с кадровым журналом</td>
+                  <td><button class="table-action disabled" type="button">На проверке</button></td>
                 </tr>
                 <tr class="active-row">
                   <td>Николай Владимирович Вавилов</td>
-                  <td><span class="status status-active">Доступно</span></td>
-                  <td>Открывает карточку сотрудника и приложенные материалы</td>
-                  <td><a class="table-action live" href="record.html">Открыть</a></td>
+                  <td><span class="status status-active">Допущен</span></td>
+                  <td>Локальное досье сотрудника, материалы ведутся отдельно</td>
+                  <td><a class="table-action live" href="record.html">Открыть досье</a></td>
                 </tr>
                 <tr>
                   <td>Климова Елена Сергеевна</td>
-                  <td><span class="status status-muted">Архив</span></td>
-                  <td>Материалы переведены в локальное хранение</td>
-                  <td><button class="table-action disabled" type="button">Архив</button></td>
+                  <td><span class="status status-muted">Скрыто</span></td>
+                  <td>Карточка без вложений, оставлена только служебная шапка</td>
+                  <td><button class="table-action disabled" type="button">Без вложений</button></td>
                 </tr>
                 <tr>
                   <td>Данилов Тимофей Павлович</td>
-                  <td><span class="status status-error">Отказ</span></td>
-                  <td>Вложение отклонено после повторной проверки</td>
-                  <td><button class="table-action disabled" type="button">Отклонено</button></td>
+                  <td><span class="status status-error">Блок</span></td>
+                  <td>Доступ к приложению снят до завершения внутренней проверки</td>
+                  <td><button class="table-action disabled" type="button">Заблокировано</button></td>
+                </tr>
+                <tr>
+                  <td>Ковалёв Арсений Витальевич</td>
+                  <td><span class="status status-muted">Архив</span></td>
+                  <td>Карточка закрыта после переноса материалов в локальное хранилище</td>
+                  <td><button class="table-action disabled" type="button">Архив</button></td>
+                </tr>
+                <tr>
+                  <td>Синицына Полина Юрьевна</td>
+                  <td><span class="status status-warn">Пауза</span></td>
+                  <td>Ожидается подпись по согласованию доступа к архиву</td>
+                  <td><button class="table-action disabled" type="button">Ожидание подписи</button></td>
                 </tr>
               </tbody>
             </table>
@@ -137,39 +156,72 @@
       </div>
     </section>
 
-    <section class="archive-section">
+    <section class="archive-section archive-grid-section">
       <div class="container archive-grid">
         <article class="archive-card muted-card">
-          <p class="archive-card-label">Служебные замечания</p>
-          <h2>Комментарий старшего смены</h2>
-          <p>
-            До завершения ручной проверки карточки, помеченные как архивные или ограниченные,
-            не выводятся во внешний контур. Доступ к материалам осуществляется по прямому
-            маршруту из внутреннего реестра с фиксацией времени открытия записи.
-          </p>
+          <p class="archive-card-label">Контроль качества</p>
+          <h2>Очередь обработки</h2>
+          <div class="log-list">
+            <div class="log-line"><span>QC-12</span><span>Повторный контроль по гемолизированным пробам — 2 образца</span></div>
+            <div class="log-line"><span>QC-18</span><span>Сверка сроков годности калибраторов на иммуноблоке</span></div>
+            <div class="log-line"><span>QC-21</span><span>Подтверждение отклонённого результата до публикации</span></div>
+            <div class="log-line"><span>QC-24</span><span>Выдача в архив только после подписи ответственного</span></div>
+          </div>
         </article>
 
         <article class="archive-card muted-card">
-          <p class="archive-card-label">Состояние публикации</p>
-          <h2>Каналы выдачи</h2>
+          <p class="archive-card-label">Сводка несоответствий</p>
+          <h2>Точки внимания</h2>
           <ul class="archive-list">
-            <li>Внешний реестр: активен</li>
-            <li>Локальный архив: активен</li>
-            <li>Видеовложения: доступны по карточке</li>
-            <li>Фотоматериалы: доступны по карточке</li>
+            <li>1 направление возвращено на повторный забор из-за нарушения преаналитики</li>
+            <li>2 карточки сотрудников ожидают актуализацию локальных приложений</li>
+            <li>1 запись временно исключена из выдачи до подписи руководителя смены</li>
+            <li>Медиа-вложения доступны только через адресные страницы досье</li>
           </ul>
         </article>
 
         <article class="archive-card muted-card">
           <p class="archive-card-label">Лента событий</p>
-          <h2>Архивные отметки</h2>
+          <h2>Внутренние отметки</h2>
           <div class="log-list">
-            <div class="log-line"><span>10:18</span><span>Обновлена запись HL-INT-042</span></div>
-            <div class="log-line"><span>10:27</span><span>Подтверждён маршрут вложений карточки</span></div>
-            <div class="log-line"><span>10:34</span><span>Проверены права доступа внутреннего раздела</span></div>
-            <div class="log-line"><span>10:49</span><span>Архив синхронизирован без замечаний</span></div>
+            <div class="log-line"><span>LAB-03</span><span>Приём материалов из процедурного кабинета завершён без задержек</span></div>
+            <div class="log-line"><span>LAB-07</span><span>Печать протоколов переведена на вторую рабочую станцию</span></div>
+            <div class="log-line"><span>LAB-10</span><span>Локальный архив доступен только после ввода служебного кода</span></div>
+            <div class="log-line"><span>LAB-14</span><span>Проверка персонального досье завершена, публикация разрешена адресно</span></div>
           </div>
         </article>
+      </div>
+    </section>
+
+    <section class="archive-section">
+      <div class="container">
+        <div class="archive-grid archive-grid-wide">
+          <article class="archive-card muted-card">
+            <p class="archive-card-label">Протокол смены</p>
+            <h2>Краткая служебная справка</h2>
+            <p>
+              На 11:30 приёмный пост работает в штатной нагрузке. Пробирки для общего
+              анализа крови и биохимии переданы в аналитический блок, срочные направления
+              маркируются отдельно и сопровождаются ручной отметкой в журнале выдачи.
+            </p>
+            <p>
+              Внутренний архив используется для хранения персональных карточек сотрудников,
+              служебных примечаний и адресных досье. Полный состав приложений не выводится
+              в общий реестр, чтобы исключить внешнюю публикацию вложений и локальных медиа.
+            </p>
+          </article>
+
+          <article class="archive-card muted-card">
+            <p class="archive-card-label">Состояние инфраструктуры</p>
+            <h2>Служебные флаги</h2>
+            <div class="fragments-grid">
+              <div class="fragment-card">ЛИС: обмен с локальным архивом активен</div>
+              <div class="fragment-card">Иммуноблок: калибровка подтверждена</div>
+              <div class="fragment-card">Печать протоколов: резервный канал доступен</div>
+              <div class="fragment-card">Досье сотрудников: только адресное открытие</div>
+            </div>
+          </article>
+        </div>
       </div>
     </section>
   </main>

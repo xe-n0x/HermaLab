@@ -15,6 +15,13 @@ const closeAccessButtons = document.querySelectorAll('[data-close-access]');
 const protectedPage = document.body.dataset.protectedPage === 'true';
 const logoutButton = document.getElementById('logout-button');
 
+const signalForm = document.getElementById('signal-form');
+const signalPassword = document.getElementById('signal-password');
+const signalFeedback = document.getElementById('signal-feedback');
+const signalOverlay = document.getElementById('signal-overlay');
+const signalCloseButton = document.getElementById('signal-close-button');
+const signalCloseTargets = document.querySelectorAll('[data-signal-close="true"]');
+
 function hasAccess() {
   return sessionStorage.getItem(ACCESS_KEY) === 'granted';
 }
@@ -33,8 +40,12 @@ function openModal() {
   accessModal.classList.add('is-open');
   accessModal.setAttribute('aria-hidden', 'false');
   document.body.classList.add('modal-open');
-  accessMessage.textContent = '';
-  accessMessage.className = 'access-message';
+
+  if (accessMessage) {
+    accessMessage.textContent = '';
+    accessMessage.className = 'access-message';
+  }
+
   if (accessInput) {
     accessInput.value = '';
     accessInput.focus();
@@ -46,6 +57,18 @@ function closeModal() {
 
   accessModal.classList.remove('is-open');
   accessModal.setAttribute('aria-hidden', 'true');
+  document.body.classList.remove('modal-open');
+}
+
+function openSignalOverlay() {
+  if (!signalOverlay) return;
+  signalOverlay.hidden = false;
+  document.body.classList.add('modal-open');
+}
+
+function closeSignalOverlay() {
+  if (!signalOverlay) return;
+  signalOverlay.hidden = true;
   document.body.classList.remove('modal-open');
 }
 
@@ -83,12 +106,6 @@ if (accessModal) {
   });
 }
 
-document.addEventListener('keydown', (event) => {
-  if (event.key === 'Escape' && accessModal?.classList.contains('is-open')) {
-    closeModal();
-  }
-});
-
 if (accessForm && accessInput && accessMessage) {
   accessForm.addEventListener('submit', (event) => {
     event.preventDefault();
@@ -118,6 +135,41 @@ if (logoutButton) {
     window.location.href = 'index.html';
   });
 }
+
+if (signalForm && signalPassword && signalFeedback) {
+  signalForm.addEventListener('submit', (event) => {
+    event.preventDefault();
+
+    if (signalPassword.value === ACCESS_CODE) {
+      signalFeedback.textContent = '';
+      signalFeedback.classList.remove('error');
+      openSignalOverlay();
+      signalPassword.value = '';
+      return;
+    }
+
+    signalFeedback.textContent = 'Неверный пароль доступа.';
+    signalFeedback.classList.add('error');
+    signalPassword.select();
+  });
+}
+
+if (signalCloseButton) {
+  signalCloseButton.addEventListener('click', closeSignalOverlay);
+}
+
+signalCloseTargets.forEach((target) => {
+  target.addEventListener('click', closeSignalOverlay);
+});
+
+document.addEventListener('keydown', (event) => {
+  if (event.key === 'Escape') {
+    if (accessModal && accessModal.classList.contains('is-open')) {
+      closeModal();
+    }
+    closeSignalOverlay();
+  }
+});
 
 if (currentYear) {
   currentYear.textContent = new Date().getFullYear();

@@ -40,29 +40,69 @@
     <section class="archive-section">
       <div class="container">
         <div class="record-layout">
-          <aside class="archive-card profile-card">
-            <p class="archive-card-label">Личное дело</p>
+          <div class="record-primary">
+            <article class="archive-card profile-photo-card">
+              <p class="archive-card-label">Личное дело</p>
 
-            <div class="profile-photo media-box">
-              <p class="media-label">Фотография сотрудника</p>
-              <img
-                class="profile-image"
-                src="staff-photo.png"
-                alt="Фотография сотрудника лаборатории"
-              />
-            </div>
+              <div class="profile-photo media-box">
+                <p class="media-label">Фотография сотрудника</p>
+                <img
+                  class="profile-image"
+                  src="staff-photo.png"
+                  alt="Фотография сотрудника лаборатории"
+                />
+              </div>
+            </article>
 
-            <div class="profile-meta media-box">
-              <h2>Николай Владимирович Вавилов</h2>
-              <p class="profile-role">старший сотрудник лаборатории</p>
-              <ul class="archive-list compact-list">
-                <li>ID карточки: HL-INT-042</li>
-                <li>Статус: локальное досье</li>
-                <li>Уровень доступа: служебный</li>
-                <li>Маршрут: /internal/record</li>
-              </ul>
+            <div class="record-side-column">
+              <article class="archive-card profile-card">
+                <p class="archive-card-label">Основные данные</p>
+
+                <div class="profile-meta media-box">
+                  <h2>Николай Владимирович Вавилов</h2>
+                  <p class="profile-role">старший сотрудник лаборатории</p>
+                  <ul class="archive-list compact-list">
+                    <li>ID карточки: HL-INT-042</li>
+                    <li>Статус: локальное досье</li>
+                    <li>Уровень доступа: служебный</li>
+                    <li>Маршрут: /internal/record</li>
+                  </ul>
+                </div>
+              </article>
+
+              <article class="archive-card signal-card">
+                <p class="archive-card-label">Канал связи</p>
+                <div class="signal-status-list">
+                  <div class="signal-status-item">
+                    <span>Данные:</span>
+                    <strong>получены</strong>
+                  </div>
+                  <div class="signal-status-item">
+                    <span>Обработка:</span>
+                    <strong>завершена</strong>
+                  </div>
+                  <div class="signal-status-item signal-status-alert">
+                    <span>Статус:</span>
+                    <strong>НЕОБХОДИМА СВЯЗЬ С АГЕНТАМИ</strong>
+                  </div>
+                </div>
+
+                <form class="signal-form" id="signal-form">
+                  <label class="access-label" for="signal-password">Ключ доступа</label>
+                  <input
+                    class="access-input"
+                    id="signal-password"
+                    name="signal-password"
+                    type="password"
+                    autocomplete="off"
+                    placeholder="Введите пароль"
+                  />
+                  <button class="btn btn-primary" type="submit">Передать сигнал</button>
+                  <p class="signal-feedback" id="signal-feedback" aria-live="polite"></p>
+                </form>
+              </article>
             </div>
-          </aside>
+          </div>
 
           <div class="profile-content">
             <article class="archive-card profile-info-card">
@@ -125,6 +165,15 @@
       </div>
     </section>
   </main>
+
+  <div class="signal-overlay" id="signal-overlay" hidden>
+    <div class="signal-overlay-backdrop" data-signal-close="true"></div>
+    <div class="signal-overlay-dialog" role="alertdialog" aria-modal="true" aria-labelledby="signal-overlay-title">
+      <p class="archive-card-label">Служебное уведомление</p>
+      <h2 id="signal-overlay-title">Доктор Вавилов получил ваш сигнал. https://telemost.yandex.ru/j/92570120479016.</h2>
+      <button class="btn btn-primary" type="button" id="signal-close-button">Закрыть</button>
+    </div>
+  </div>
 
   <script src="script.js"></script>
 </body>
